@@ -149,7 +149,7 @@ const AdminBanners = () => {
 
 
       {showForm && (
-        <div className="mt-6 rounded-lg bg-light p-6 shadow-md dark:bg-dark-card">
+        <div className="mt-6 rounded-lg bg-dark p-6 shadow-md dark:bg-dark-card">
           <h2 className="mb-4 text-xl font-semibold text-light-title dark:text-dark-title">
             {editingBanner ? 'Edit Banner' : 'Create New Banner'}
           </h2>
@@ -221,7 +221,7 @@ const AdminBanners = () => {
             <div className="flex gap-2">
               <button
                 type="submit"
-                className="rounded-lg bg-light-primary px-4 py-2 text-white hover:bg-light-primary/90 dark:bg-dark-primary dark:hover:bg-dark-primary/90"
+                className="rounded-lg bg-dark-primary px-4 py-2 text-dark hover:bg-dark-primary/90 dark:bg-dark-primary dark:hover:bg-dark-primary/90"
               >
                 {editingBanner ? 'Update Banner' : 'Create Banner'}
               </button>

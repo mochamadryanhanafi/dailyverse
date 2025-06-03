@@ -262,7 +262,7 @@ function FormBlog({ type, postId, post }: FormBlogPropType) {
                 className="dark:text-textInField w-3/4 rounded-lg bg-slate-200 p-3 placeholder:text-sm placeholder:text-light-tertiary dark:bg-dark-field dark:text-dark-textColor dark:placeholder:text-dark-tertiary lg:w-10/12"
                 value={formData.imageLink}
               />
-              <button
+              {/* <button
                 name="openModal"
                 type="button"
                 className="lg:text-md active:scale-click w-1/4 rounded-lg bg-light-primary text-xs text-slate-50 hover:bg-light-primary/80 dark:bg-dark-primary dark:text-dark-card dark:hover:bg-dark-secondary/80 sm:text-sm lg:w-2/12 lg:px-4 lg:py-3"
@@ -271,7 +271,7 @@ function FormBlog({ type, postId, post }: FormBlogPropType) {
                 }}
               >
                 Pick image
-              </button>
+              </button> */}
             </div>
             {errors.imageLink && (
               <span className="p-2 text-sm text-red-500">{`${errors.imageLink.message}`}</span>
