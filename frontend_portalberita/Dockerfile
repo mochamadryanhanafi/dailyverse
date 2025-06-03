@@ -1,15 +1,20 @@
-# Stage 1: Build
-FROM node:18-alpine AS build
+# Pakai node image untuk development
+FROM node:18-alpine
+
+# Set direktori kerja
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+
+# Salin package.json dan package-lock.json dulu untuk caching layer npm install
+COPY package*.json ./
+
+# Install dependencies dengan legacy-peer-deps agar kompatibel
+RUN npm install --legacy-peer-deps
+
+# Salin semua file source code
 COPY . .
-RUN npm run dev
 
-# Stage 2: Serve static content
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+# Expose port Vite default (5173)
+EXPOSE 5173
 
-# expose port 80
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Jalankan vite dev server, gunakan host 0.0.0.0 agar bisa diakses dari luar container
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

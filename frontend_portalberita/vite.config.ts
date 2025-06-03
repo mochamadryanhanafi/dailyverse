@@ -17,7 +17,6 @@ export default defineConfig({
       './src/__tests__/integration-test/home.test.tsx',
       './src/__tests__/App.test.tsx',
     ],
-
     setupFiles: './test-setup.ts',
   },
 
@@ -26,8 +25,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+
   server: {
     host: '0.0.0.0',
-    port: 5173
-  }
+    port: 5173,
+    allowedHosts: [
+      'dailyversee.com',
+      'frontend-portal-228773643545.us-central1.run.app',
+      'localhost',
+      '127.0.0.1',
+    ],
+  },
 });
