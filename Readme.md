@@ -62,14 +62,22 @@ Daily Verse dibangun menggunakan **stack MERN** (MongoDB, Express, React, Node.j
 
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal:
 
-### 1. Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/mochamadryanhanafi/dailyverse.git
 cd dailyverse
 ```
 
-### 1. install backend
+### build redis database in local
+
+```bash
+docker run -d --name redis -p 6379:6379 redis:latest                           
+```
+### setup file .env, extract dan pindahkan file ke dalam folder fronend_portal berita untuk frontend.env dan backend_portalberita untuk backend.env dan rename menjadi .env 
+
+
+### install backend
 
 ```bash
 cd backend_portalberita
@@ -78,7 +86,7 @@ npm install npx
 npx tsx server.ts
 ```
 
-### 1. install Frontend
+### install Frontend
 
 ```
 cd frontend_portalberita
@@ -86,6 +94,11 @@ npm install --legacy-peer-deps
 npm run dev
 ```
 
+
 ## Tampilan Aplikasi
 
-![Beranda](https://user-images.githubusercontent.com/12345678/abc123.png)
+![Home](https://res.cloudinary.com/dnvulh8wx/image/upload/v1749528628/a2c5fa02-d7b8-4f6e-93b2-a7a3e635534d.png)
+
+![Hot news](https://res.cloudinary.com/dnvulh8wx/image/upload/v1749528848/Screenshot_20250610_111331_whyuxx.png)
+
+![Detailed Page](https://res.cloudinary.com/dnvulh8wx/image/upload/v1749529188/Screenshot_20250610_111924_xg1qbv.png)
