@@ -74,7 +74,9 @@ cd dailyverse
 ```bash
 docker run -d --name redis -p 6379:6379 redis:latest                           
 ```
-### setup file .env, extract dan pindahkan file ke dalam folder fronend_portal berita untuk frontend.env dan backend_portalberita untuk backend.env dan rename menjadi .env 
+### setup file .env, 
+
+extract dan pindahkan file ke dalam folder fronend_portal berita untuk frontend.env dan backend_portalberita untuk backend.env dan rename menjadi .env 
 
 
 ### install backend
