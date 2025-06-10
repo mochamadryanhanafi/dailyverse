@@ -70,6 +70,8 @@ cd dailyverse
 ```
 
 ### build redis database in local
+atau gunakan redis di vm dengan url yang dikomentar pada file env, tolong diperhatikan kalau di vm kadang redis tidak bisa digunakan redis ini penting untuk web bisa berjalan normal
+
 
 ```bash
 docker run -d --name redis -p 6379:6379 redis:latest                           
